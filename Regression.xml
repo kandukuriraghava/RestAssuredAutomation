@@ -1,0 +1,11 @@
+<suite name="API Automation Suite">
+
+    <test name="API Tests">
+
+        <classes>
+            <class name="tests.TestsExamples"/>
+        </classes>
+
+    </test>
+
+</suite>
