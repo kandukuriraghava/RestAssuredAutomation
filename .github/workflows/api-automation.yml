@@ -1,0 +1,46 @@
+# ===============================================
+# Workflow Name     : Rest Assured API Tests
+#
+# Trigger           : When code is pushed to master branch
+#
+# Job Name          : build-and-test
+#
+# Runner            : Ubuntu Latest (GitHub-hosted machine)
+#
+# Step 1            : Checkout source code from repository
+#
+# Step 2            : Install Java 21
+#
+# Step 3            : Execute Maven tests
+#                     (mvn clean test)
+#
+# Expected Result   : Rest Assured + TestNG tests run automatically
+#                     whenever code is pushed to master branch
+# ===============================================
+
+name: Rest Assured API Tests
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+
+  build-and-test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Run API Tests
+        run: mvn clean test -DsuiteXmlFile=Regression.xml
