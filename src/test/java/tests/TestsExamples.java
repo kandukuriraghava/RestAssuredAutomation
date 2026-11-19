@@ -91,4 +91,8 @@ public class TestsExamples {
 		System.out.println("Hello World");
 	}
 
+	public void sayHello() {
+		System.out.println("Hello");
+	}
+
 }
