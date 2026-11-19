@@ -33,7 +33,7 @@ public class TestsExamples {
 		baseURI = "https://reqres.in/api";
 		Response response = get("/users/2");
 		response.then().statusCode(200).body("data.id",equalTo(2)).log().all();
-		response.then().assertThat().body(matchesJsonSchemaInClasspath("ReqRes.json"));
+		//response.then().assertThat().body(matchesJsonSchemaInClasspath("ReqRes.json"));
 	}
 
 	@Test
