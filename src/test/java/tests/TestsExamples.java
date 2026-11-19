@@ -26,8 +26,7 @@ public class TestsExamples {
 		System.out.println("Content Type:"+response.getHeader("Content-Type"));
 		System.out.println(response.getTime());
 		Assert.assertEquals(statusCode, 200,"Response code should be 200");
-	}
-	
+	}	
 
 	@Test
 	public void test2() {
@@ -94,7 +93,6 @@ public class TestsExamples {
 	public void wish() {
 		System.out.println("Good Morning");
 	}
-
 
 	public void sayHello() {
 		System.out.println("Hello Rudvik, welcome to Hyderabad");
