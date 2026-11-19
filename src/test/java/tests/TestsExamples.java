@@ -90,6 +90,11 @@ public class TestsExamples {
 	public static void main(String[] args) {
 		System.out.println("Hello World");
 	}
+	
+	public void wish() {
+		System.out.println("Good Morning");
+	}
+
 
 	public void sayHello() {
 		System.out.println("Hello Hyderabad");
