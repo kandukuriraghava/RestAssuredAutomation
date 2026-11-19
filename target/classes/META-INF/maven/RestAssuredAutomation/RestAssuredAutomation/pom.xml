@@ -3,6 +3,12 @@
   <groupId>RestAssuredAutomation</groupId>
   <artifactId>RestAssuredAutomation</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+      <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+    </properties>
+    
   <dependencies>
   
   <!-- Source: https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
@@ -34,4 +40,17 @@
 </dependency>
 
   </dependencies>
+  
+  <build>
+    <plugins>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.5.3</version>
+        </plugin>
+
+    </plugins>
+</build>
+
 </project>
