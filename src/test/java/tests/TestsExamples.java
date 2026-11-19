@@ -14,8 +14,9 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 
 public class TestsExamples {
 	
-	//@Test
+	@Test
 	public void test1() {
+		//Reading Response
 		Response response = get("https://reqres.in/api/users/2");
 		int statusCode = response.getStatusCode();
 		System.out.println("Status Code:"+statusCode);
@@ -51,7 +52,7 @@ public class TestsExamples {
 			post("/users").then().statusCode(201);
 	}
 	
-	//@Test
+	@Test
 	public void testPut() {
 		User userPayload = new User();
 		userPayload.setName("Rudvik");
@@ -69,7 +70,7 @@ public class TestsExamples {
 		log().all();
 	}
 	
-	//@Test
+	@Test
 	public void testPatch() {
 		User userPayload = new User();
 		userPayload.setName("Rudvik Arya");
