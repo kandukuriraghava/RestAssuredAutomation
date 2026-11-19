@@ -86,5 +86,9 @@ public class TestsExamples {
 			statusCode(200).
 		log().all();
 	}
+	
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+	}
 
 }
