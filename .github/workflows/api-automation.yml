@@ -21,9 +21,16 @@
 name: Rest Assured API Tests
 
 on:
-  push:
-    branches:
-      - master
+
+  workflow_dispatch:
+
+  schedule:
+    - cron: '*/5 * * * *'
+
+#on:
+#  push:
+#    branches:
+#      - master
 
 jobs:
 
